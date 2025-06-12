@@ -70,7 +70,7 @@ function checarEstrutura(placa) {
     !isNumero(placa[5]) ||
     !isNumero(placa[6])
   ) {
-    alert("PLACA INVÁLIDA!"); // Alerta caso a placa não siga o formato correto
+    mostrarAlerta("PLACA INVÁLIDA!"); // Alerta caso a placa não siga o formato correto
 
     return false;
   }
@@ -115,16 +115,16 @@ function qualEstado(placa) {
     (placa >= 806 && placa <= 4324) || // Intervalo para São Paulo (BFA a GKI)
     (placa >= 11297 && placa <= 11311) // Intervalo para São Paulo (QSN a QSZ)
   ) {
-    estado = "Placa pertence ao Estado de São Paulo";
+    estado = "Esta placa pertence ao Estado de São Paulo";
 
-    return alert(`${estado}`);
+    return mostrarAlerta(`${estado}`);
   } else if (
     (placa >= 7077 && placa <= 7986) || // Intervalo para Rio de Janeiro (KMF a LVE)
     (placa >= 11714 && placa <= 11773) // Intervalo para Rio de Janeiro (RIO a RKV)
   ) {
-    estado = "Placa pertence ao Estado do Rio de Janeiro";
+    estado = "Esta placa pertence ao Estado do Rio de Janeiro";
 
-    return alert(`${estado}`);
+    return mostrarAlerta(`${estado}`);
   } else if (
     (placa >= 8499 && placa <= 8631) || // Intervalos para Espírito Santo
     (placa >= 9926 && placa <= 9965) ||
@@ -136,13 +136,13 @@ function qualEstado(placa) {
     (placa >= 10584 && placa <= 10593) ||
     (placa >= 10749 && placa <= 10764)
   ) {
-    estado = "Placa pertence ao Estado do Espírito Santo";
+    estado = "Esta placa pertence ao Estado do Espírito Santo";
 
-    return alert(`${estado}`);
+    return mostrarAlerta(`${estado}`);
   } else {
     // Caso o valor não esteja em nenhum intervalo definido
 
-    return alert("Placa não pertence ao Estado do nosso grupo");
+    return mostrarAlerta("Esta placa não pertence ao nosso departamento");
   }
 }
 
@@ -187,5 +187,14 @@ function gerarPlacaAleatoria() {
 
   // Atualiza o campo de input com a placa gerada
   document.getElementById("inputPlaca").value = placa;
-  
+
+}
+
+function mostrarAlerta(mensagem) {
+  document.getElementById("alertMessage").innerText = mensagem;
+  document.getElementById("alertCustom").style.display = "flex";
+}
+
+function fecharAlerta() {
+  document.getElementById("alertCustom").style.display = "none";
 }
