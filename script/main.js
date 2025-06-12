@@ -44,10 +44,10 @@ function checarEstrutura(placa) {
 
 
   ) {
+    
 
-
-    alert("PLACA INVÁLIDA!"); // Alerta caso a placa não siga o formato correto
-
+    alert("Está placa não pertence ao nosso departamento!"); // Alerta caso a placa não siga o formato correto
+    alert
 
     return false;
 
