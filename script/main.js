@@ -142,7 +142,7 @@ function qualEstado(placa) {
   } else {
     // Caso o valor não esteja em nenhum intervalo definido
 
-    return alert("Placa não pertence ao Estado do nosso grupo");
+    return alert("Esta placa não pertence ao nosso departamento");
   }
 }
 
