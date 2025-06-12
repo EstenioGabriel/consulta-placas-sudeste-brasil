@@ -187,4 +187,5 @@ function gerarPlacaAleatoria() {
 
   // Atualiza o campo de input com a placa gerada
   document.getElementById("inputPlaca").value = placa;
+  
 }
