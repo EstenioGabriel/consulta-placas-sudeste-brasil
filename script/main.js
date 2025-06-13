@@ -9,9 +9,9 @@ Possibilidade de números: 10 (0 até 9)
 Cálculo: 
 L * L * L * N * L * N * N -> 26 * 26 * 26 * 10 * 26 * 10 * 10
 
-26 ^ 4 * 10 ^3 = 456.976 * 1.000 
+26 ^ 4 * 10 ^3 = 456.976.000 Possibilidadesa
 
-456.976.000 Possibilidadesa
+
 
 Observação:
 Este valor representa o universo total de placas possíveis com a estrutura LLLNLNN.
@@ -126,15 +126,15 @@ function qualEstado(placa) {
 
     return mostrarAlerta(`${estado}`);
   } else if (
-    (placa >= 8499 && placa <= 8631) || // Intervalos para Espírito Santo
-    (placa >= 9926 && placa <= 9965) ||
-    (placa >= 9999 && placa <= 10000) ||
-    (placa >= 10002 && placa <= 10006) ||
-    (placa >= 10037 && placa <= 10043) ||
-    (placa >= 10129 && placa <= 10154) ||
-    (placa >= 10374 && placa <= 10384) ||
-    (placa >= 10584 && placa <= 10593) ||
-    (placa >= 10749 && placa <= 10764)
+  (placa >= 8499 && placa <= 8631) ||
+  (placa >= 9537 && placa <= 9561) ||
+  (placa >= 10014 && placa <= 10015) ||
+  (placa >= 10017 && placa <= 10021) ||
+  (placa >= 10091 && placa <= 10098) ||
+  (placa >= 10530 && placa <= 10555) ||
+  (placa >= 11259 && placa <= 11270) ||
+  (placa >= 11518 && placa <= 11527) ||
+  (placa >= 11920 && placa <= 11929) 
   ) {
     estado = "Esta placa pertence ao Estado do Espírito Santo";
 
